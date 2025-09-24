@@ -1,59 +1,39 @@
-# The-Adventure-Game-1
+# Start the game
 def play_game():
+    # Ask player name
+    name = input("What is your name? ")
 
-  #locations dictionarry
-  locations={"forest":"You find a treasure chest!",
-          "cave":"A animal attacks you",
-          "river":"escape"}
+    # Show choices
+    print("Choose a location:")
+    print("forest")
+    print("cave")
+    print("river")
 
-  if "forest"in locations:
-            print("forest")
-            if "cave"in locations:
-              print("cave")
-              if "river"in locations:
-                print("river")
+    choice = input("Where do you want to go? ")
 
-      #choice
-choice=input("Where do you want to go?")
+    # Forest path
+    if choice == "forest":
+        print("You see a treasure chest!")
+        decision = input("Do you want to open it or ignore it? ")
 
-#forest path
-if choice == "forest":
-  print ("you find a treasure chest!")
-  decision = input("Do you want to open it or ignore it? ")
-  if decision == "open":
-            print("You opened the chest")
-  elif decision == "ignore":
-            print("You walked away.")
-  else:
+        if decision == "open":
+            print("You opened the chest and found gold!")
+        elif decision == "ignore":
+            print("You walked away safely.")
+        else:
             print("You did nothing and missed your chance.")
 
-
-
     # Cave path
-
-elif choice == "cave":
-  print("A animal attacks you!")
-  decision = input("Do you want to open it or ignore it? ")
-if decision =="open":
-    print("You opened the cave")
-  elif decision =="ignore":
-      print("You walked away safely.")
-  else:
-      print("You did nothing and missed your chance.")
-
-
+    elif choice == "cave":
+        print("A wild animal attacks you!")
 
     # River path
-elif choice == "river":
-  print("You escaped safely!")
-  decision = input("Do you want to open it or ignore it? ")
-  if decision == "open":
-    print("You opened the river")
-  elif decision == "ignore":
-    print("You walked away safely.")
-  else:
-    print("You did nothing and missed your chance.")
+    elif choice == "river":
+        print("You found a boat and escaped safely!")
 
     # Invalid choice
-else:
-        print("That is not a valid choice. Game Over!")
+    else:
+        print("That is not a valid choice. Game Over!")
+
+
+
