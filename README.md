@@ -1,4 +1,3 @@
-# Start the game
 def play_game():
     # Ask player name
     name = input("What is your name? ")
@@ -35,5 +34,5 @@ def play_game():
     else:
         print("That is not a valid choice. Game Over!")
 
-
-
+# Start the game
+play_game()
